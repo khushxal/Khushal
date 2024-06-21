@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ReactPlayer from "react-player";
 function Projects() {
   const videos = [
     {
@@ -17,62 +18,91 @@ function Projects() {
       alt: "Third video",
     },
   ];
+
+  // const [videos, setVideos] = useState([]);
+  // const [videosSet, isVideosSet] = useState(false``);
+  const [currentPage, setCurrentPage] = useState(0);
+
+  // useEffect(async function () {
+  //   const res = await fetch("/videos.json");
+  // }, []);
+
+  const handlePrev = () => {
+    setCurrentPage((prevPage) =>
+      prevPage === 0 ? videos.length - 1 : prevPage - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentPage((prevPage) =>
+      prevPage === videos.length - 1 ? 0 : prevPage + 1
+    );
+  };
+
   return (
     <div id="projects" className="container">
-      <div className="card my-1">
-        <div className="cover-container d-flex p-3 mx-auto flex-column">
-          <h2>Project Work</h2>
+      <div className="card">
+        <div className="cover-container d-flex px-3 pt-0 mx-auto my-3 flex-column">
+          <h2>Project Works</h2>
           <hr />
           <div
-            id="carouselExampleIndicators"
+            id="carouselExampleControls"
             className="carousel slide"
-            data-ride="carousel"
+            data-bs-ride="carousel"
+            data-bs-interval="10000"
           >
-            <ol className="carousel-indicators">
-              {videos.map((video, index) => (
-                <li
-                  key={video.id}
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to={index}
-                  className={index === 0 ? "active" : ""}
-                />
-              ))}
-            </ol>
-            <div className="carousel-inner">
+            <div className="carousel-inner rounded-5">
               {videos.map((video, index) => (
                 <div
                   key={video.id}
-                  className={`carousel-item ${index === 0 ? "active" : ""} `}
+                  className={`carousel-item ${
+                    index === currentPage ? "active" : ""
+                  }`}
                 >
-                  <video
-                    className="d-block w-100 rounded-5"
+                  <ReactPlayer
+                    url={video.src}
+                    className="d-block w-100"
                     controls
-                    controlsList
-                  >
-                    <source src={video.src} type="video/mp4" />
-                    {video.alt}
-                  </video>
+                    width="100%"
+                    height="100%"
+                    config={{
+                      youtube: {
+                        playerVars: { showinfo: 1 },
+                      },
+                      facebook: {
+                        appId: "12345",
+                      },
+                    }}
+                  />
+                  <div className="carousel-caption d-none d-md-block">
+                    <h5>{video.alt}</h5>
+                    <p>{video.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
-            <a
+            <button
               className="carousel-control-prev"
-              href="#carouselExampleIndicators"
-              role="button"
-              data-slide="prev"
+              type="button"
+              onClick={handlePrev}
             >
-              <span className="carousel-control-prev-icon" aria-hidden="true" />
-              <span className="sr-only">Previous</span>
-            </a>
-            <a
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="">Previous</span>
+            </button>
+            <button
               className="carousel-control-next"
-              href="#carouselExampleIndicators"
-              role="button"
-              data-slide="next"
+              type="button"
+              onClick={handleNext}
             >
-              <span className="carousel-control-next-icon" aria-hidden="true" />
-              <span className="sr-only">Next</span>
-            </a>
+              <span className="">Next</span>
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+            </button>
           </div>
         </div>
       </div>
