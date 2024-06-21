@@ -61,7 +61,7 @@ function Projects() {
                 >
                   <ReactPlayer
                     url={video.src}
-                    className="d-block w-100"
+                    className="react-player d-block w-100"
                     controls
                     width="100%"
                   />
