@@ -33,18 +33,18 @@
     "id": "6",
     "skill": "JavaScript",
     "icon": "https://img.icons8.com/?size=100&id=108784&format=png&color=000000",
-    "description": ""
-  },
-  {
-    "id": "7",
-    "skill": "MERN Stack",
-    "icon": "https://img.icons8.com/?size=100&id=N3G7bBnphi53&format=png&color=000000",
-    "description": ""
+    "description": "Understood the basics of Javascript, ES6 version and logic building. Code flow, DOM(Document Object Model), etc."
   },
   {
     "id": "8",
     "skill": "Postgres SQL",
     "icon": "https://img.icons8.com/?size=100&id=38561&format=png&color=000000",
-    "description": ""
+    "description": "Understood the basics of SQL and its uses."
+  },
+  {
+    "id": "7",
+    "skill": "MERN Stack",
+    "icon": "https://img.icons8.com/?size=100&id=N3G7bBnphi53&format=png&color=000000",
+    "description": "Started from learning Nodejs for using javascript as a language. ExpressJs for web-server configuration, ejs, etc. React as Frontend development framework. MongoDB to handle data as collection and documents."
   }
 ]

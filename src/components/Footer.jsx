@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div className="footer text-center">
       <div className="">
-        <span>@Copyright {new Date().getFullYear}</span>
+        <span>Built using React.js @{new Date().getFullYear()}</span>
       </div>
     </div>
   );

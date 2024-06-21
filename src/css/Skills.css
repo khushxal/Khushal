@@ -2,6 +2,12 @@
   height: auto;
   width: auto;
   border: solid white;
+  transition-duration: 0.4s;
+}
+
+.col > .card:hover {
+  /* box-shadow:  rgb(0, 0, 0); */
+  box-shadow: 0px 0px 10px 12px rgba(8, 0, 0, 0.5);
 }
 
 .card-img-top {

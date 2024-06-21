@@ -32,15 +32,13 @@ function Skills() {
           <div className="row row-cols-1 row-cols-md-3 g-4">
             {skills.map((skill, index) => (
               <div key={index} className="col">
-                <div className="card h-100 d-flex flex-column">
-                  <div className="text-center">
-                    <img
-                      src={skill.icon}
-                      className="card-img-top"
-                      alt={skill.skill}
-                    />
-                    <hr />
-                  </div>
+                <div className="card h-100  mx-auto">
+                  <img
+                    src={skill.icon}
+                    className="card-img-top my-2 mx-auto"
+                    alt={skill.skill}
+                  />
+                  <hr />
                   <div className="card-body">
                     <h5 className="card-title">{skill.skill}</h5>
                     <p className="card-text">{skill.description}</p>

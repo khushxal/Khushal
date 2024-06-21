@@ -18,8 +18,8 @@ function About() {
               />
             </div>
             <div className="col-lg-6 order-lg-2 col-md-12">
+              <h2>About Me</h2>
               <div className="fs-4 me-5 text-start">
-                <h2>About Me</h2>
                 <hr />
                 This is me Khushal Verma. Currently persuing B.Tech in Computer
                 Science Engineering from Medi-Caps University. I am a passionate
