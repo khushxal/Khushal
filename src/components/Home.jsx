@@ -11,7 +11,7 @@ function Home() {
             <div className="col-lg-6 order-lg-1 col-md-12 mb-4 mb-lg-0 ">
               <img
                 src={img}
-                className="d-block mx-lg-auto img-fluid rounded-circle"
+                className="d-block mx-lg-auto img-fluid rounded-5"
                 alt="Bootstrap Themes"
                 loading="eager"
               />

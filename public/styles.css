@@ -58,7 +58,6 @@ body {
 }
 
 img {
-  border-radius: 50px;
   border: black solid;
   transition: transform 0.8s ease-out;
 }
@@ -75,4 +74,16 @@ img:hover {
     height: 200px;
     height: auto; /* Maintain aspect ratio */
   }
+}
+
+.carousel,
+.carousel-inner {
+  border: white solid;
+  border-radius: 20px;
+  height: 100%;
+}
+
+.react-player {
+  height: 100%;
+  width: 100%;
 }

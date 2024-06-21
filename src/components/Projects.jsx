@@ -41,17 +41,17 @@ function Projects() {
 
   return (
     <div id="projects" className="container">
-      <div className="card">
-        <div className="cover-container d-flex px-3 pt-0 mx-auto my-3 flex-column">
-          <h2>Project Works</h2>
-          <hr />
+      <div className="card p-3">
+        <h2>Project Works</h2>
+        <hr />
+        <div className="cover-container mx-auto my-auto d-flex flex-column ">
           <div
             id="carouselExampleControls"
             className="carousel slide"
             data-bs-ride="carousel"
             data-bs-interval="10000"
           >
-            <div className="carousel-inner rounded-5">
+            <div className="carousel-inner">
               {videos.map((video, index) => (
                 <div
                   key={video.id}
@@ -64,15 +64,6 @@ function Projects() {
                     className="d-block w-100"
                     controls
                     width="100%"
-                    height="100%"
-                    config={{
-                      youtube: {
-                        playerVars: { showinfo: 1 },
-                      },
-                      facebook: {
-                        appId: "12345",
-                      },
-                    }}
                   />
                   <div className="carousel-caption d-none d-md-block">
                     <h5>{video.alt}</h5>
