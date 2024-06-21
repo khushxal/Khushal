@@ -26,7 +26,7 @@ function Skills() {
   return (
     <div id="skills" className="container">
       <div className="card my-1">
-        <div className="cover-container d-flex w-100 h-100 p-3 mx-auto my-auto flex-column">
+        <div className="cover-container d-flex p-3 mx-auto my-auto flex-column">
           <h2>Skills</h2>
           <hr />
           <div className="row row-cols-1 row-cols-md-3 g-4">
