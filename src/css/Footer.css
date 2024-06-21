@@ -1,0 +1,11 @@
+.footer {
+  background-color: #1a2130;
+  position: static;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+}
