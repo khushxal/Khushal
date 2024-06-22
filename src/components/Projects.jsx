@@ -42,7 +42,7 @@ function Projects() {
   return (
     <div id="projects" className="container">
       <div className="card">
-        <div className="cover-container p-3 h-100 w-100 d-flex flex-column">
+        <div className="cover-container p-3 w-100 mx-auto d-flex flex-column">
           <h2>Project Works</h2>
           <hr />
           <div
@@ -51,7 +51,7 @@ function Projects() {
             data-bs-ride="carousel"
             data-bs-interval="10000"
           >
-            <div className="carousel-inner ">
+            <div className="carousel-inner h-100">
               {videos.map((video, index) => (
                 <div
                   key={index}

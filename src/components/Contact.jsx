@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Contact.css";
 import img from "../images/contactme.jpeg";
 function Contact() {
+  const [details, setDetails] = useState({});
+
+  function handleChange(e) {
+    try {
+      const { name, value } = e.target;
+      setDetails((prevDetail) => {
+        return { ...prevDetail, [name]: value };
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   function handleSubmit(e) {
     try {
       e.preventDefault();
+      setDetails({
+        email: "",
+        phone: "",
+      });
     } catch (err) {
       console.log(err);
     }
@@ -39,8 +56,11 @@ function Contact() {
                         </label>
                         <input
                           type="email"
+                          name="email"
                           className="form-control"
                           id="exampleFormControlInput1"
+                          onChange={handleChange}
+                          value={details.email}
                         />
                       </div>
                       <div class="mb-3">
@@ -51,9 +71,12 @@ function Contact() {
                           Phone
                         </label>
                         <input
-                          type="email"
+                          type="text"
+                          name="phone"
                           className="form-control"
                           id="exampleFormControlInput1"
+                          onChange={handleChange}
+                          value={details.phone}
                         />
                       </div>
                     </div>

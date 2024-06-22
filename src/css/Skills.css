@@ -15,3 +15,7 @@
   height: 100px;
   border: 0;
 }
+
+#skill-card-img {
+  box-shadow: none;
+}

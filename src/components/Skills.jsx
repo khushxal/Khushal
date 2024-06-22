@@ -34,6 +34,7 @@ function Skills() {
               <div key={index} className="col">
                 <div className="card h-100 mx-auto">
                   <img
+                    id="skill-card-img"
                     src={skill.icon}
                     className="card-img-top my-2 mx-auto"
                     alt={skill.skill}
