@@ -19,7 +19,7 @@ function Contact() {
   function handleSubmit(e) {
     try {
       e.preventDefault();
-      if (details) {
+      if (details.email && details.phone) {
         toast.success("Your contact details reached to me.");
       } else {
         toast.error("Filling the form is mandatory.");
@@ -37,7 +37,7 @@ function Contact() {
       <div className="cover-container h-100 w-100 d-flex p-3 flex-column">
         <h2>Contact Me</h2>
         <hr />
-        <div className="row mt-5">
+        <div className="row mt-2">
           <div class="col-12 col-md-6 mx-auto">
             <div class="card" id="contact-card">
               <div class="card-img text-center">
@@ -63,6 +63,7 @@ function Contact() {
                         id="exampleFormControlInput1"
                         onChange={handleChange}
                         value={details.email}
+                        email={true}
                       />
                     </div>
                     <div class="mb-3">
@@ -76,6 +77,8 @@ function Contact() {
                         id="exampleFormControlInput1"
                         onChange={handleChange}
                         value={details.phone}
+                        minLength={10}
+                        maxLength={10}
                       />
                     </div>
                   </div>
@@ -86,6 +89,14 @@ function Contact() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="fs-3 mx-auto my-auto">
+          <span className="fs-2 text-danger">
+            Note <br />
+          </span>
+          I haven't handled the form data till, but i will if you give me a
+          chance to showcase my skill.
+          <div>📲 : 8602352536 </div> <div>📩 : vkkhushal18@gmail.com</div>
         </div>
       </div>
     </div>
