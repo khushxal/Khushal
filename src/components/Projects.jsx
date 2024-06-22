@@ -41,33 +41,33 @@ function Projects() {
 
   return (
     <div id="projects" className="container">
-      <div className="card p-3">
-        <h2>Project Works</h2>
-        <hr />
-        <div className="cover-container mx-auto my-auto d-flex flex-column ">
+      <div className="card">
+        <div className="cover-container p-3 h-100 w-100 d-flex flex-column">
+          <h2>Project Works</h2>
+          <hr />
           <div
             id="carouselExampleControls"
-            className="carousel slide"
+            className="carousel slide p-1 m-0"
             data-bs-ride="carousel"
             data-bs-interval="10000"
           >
-            <div className="carousel-inner">
+            <div className="carousel-inner ">
               {videos.map((video, index) => (
                 <div
-                  key={video.id}
+                  key={index}
                   className={`carousel-item ${
                     index === currentPage ? "active" : ""
                   }`}
                 >
                   <ReactPlayer
                     url={video.src}
-                    className="react-player d-block w-100"
+                    className="react-player d-block w-100 "
                     controls
                     width="100%"
+                    height="100%"
                   />
                   <div className="carousel-caption d-none d-md-block">
                     <h5>{video.alt}</h5>
-                    <p>{video.description}</p>
                   </div>
                 </div>
               ))}
@@ -77,10 +77,10 @@ function Projects() {
               type="button"
               onClick={handlePrev}
             >
-              <span
+              {/* <span
                 className="carousel-control-prev-icon"
                 aria-hidden="true"
-              ></span>
+              ></span> */}
               <span className="">Previous</span>
             </button>
             <button
@@ -89,10 +89,10 @@ function Projects() {
               onClick={handleNext}
             >
               <span className="">Next</span>
-              <span
+              {/* <span
                 className="carousel-control-next-icon"
                 aria-hidden="true"
-              ></span>
+              ></span> */}
             </button>
           </div>
         </div>

@@ -18,7 +18,7 @@ function Home() {
             </div>
             {/* <div className="col-lg-6"> */}
             <div className="col-lg-6 order-lg-2 col-md-12">
-              <h1 class="display-5 mb-2">
+              <h1 className="display-5 mb-2">
                 I'm <br />
                 Khushal Verma
               </h1>

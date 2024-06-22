@@ -76,12 +76,10 @@ img:hover {
   }
 }
 
-.carousel,
+/* .carousel,
 .carousel-inner {
-  border: white solid;
-  border-radius: 20px;
   height: 100%;
-}
+} */
 
 .react-player {
   height: 100%;

@@ -1,0 +1,12 @@
+#contact-card {
+  height: max-content;
+  border: white solid;
+}
+
+#contact-card-img {
+  border: 0;
+}
+
+#contact-card-img:hover {
+  transform: scale(1);
+}
