@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "skill": "C Programming",
+    "icon": "https://img.icons8.com/?size=100&id=40670&format=png&color=000000",
+    "description": "Understood the basic of programming. Structure, Top-down approach. Functions, pointers, structure, enums, etc. Logic building."
+  },
+  {
+    "id": "2",
+    "skill": "C++ / OOPs Concepts / SOLID Principles",
+    "icon": "https://img.icons8.com/?size=100&id=TpULddJc4gTh&format=png&color=000000",
+    "description": "Understood all the concepts and principles of OOPs - Classes, Objects, Inheritance, Polomorphism, Abstraction, Encapsulation. Created an Banking System on Console. "
+  },
+  {
+    "id": "3",
+    "skill": "Java / Java Core / Java EE(Java Advance)",
+    "icon": "https://img.icons8.com/?size=100&id=GPfHz0SM85FX&format=png&color=000000",
+    "description": "Understood the Basics of Java as a language and as a technology. Servlet, JSP Architecture."
+  },
+  {
+    "id": "4",
+    "skill": "Spring MVC Architecture",
+    "icon": "https://img.icons8.com/?size=100&id=90519&format=png&color=000000",
+    "description": "Understood and implemented Spring Model, View, Architecture. Spring Framework, IOC container, Beans, etc."
+  },
+  {
+    "id": "5",
+    "skill": "Spring Boot",
+    "icon": "https://img.icons8.com/?size=100&id=A3Ulk2RcONKs&format=png&color=000000",
+    "description": "Understood and implemented REST-Full API's. Created a E-Library Project for skills development."
+  },
+  {
+    "id": "6",
+    "skill": "JavaScript",
+    "icon": "https://img.icons8.com/?size=100&id=108784&format=png&color=000000",
+    "description": "Understood the basics of Javascript, ES6 version and logic building. Code flow, DOM(Document Object Model), etc."
+  },
+  {
+    "id": "8",
+    "skill": "Postgres SQL",
+    "icon": "https://img.icons8.com/?size=100&id=38561&format=png&color=000000",
+    "description": "Understood the basics of SQL and its uses."
+  },
+  {
+    "id": "7",
+    "skill": "MERN Stack",
+    "icon": "https://img.icons8.com/?size=100&id=N3G7bBnphi53&format=png&color=000000",
+    "description": "Started from learning Nodejs for using javascript as a language. ExpressJs for web-server configuration, ejs, etc. React as Frontend development framework. MongoDB to handle data as collection and documents."
+  }
+]

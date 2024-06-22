@@ -1,0 +1,88 @@
+* {
+  font-family: "Poppins";
+  text-shadow: 0px 6px 5px rgb(6, 6, 6);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    to right top,
+    #fdffe2,
+    #c0d4be,
+    #89a99f,
+    #5c7f81,
+    #3a5560,
+    #415461,
+    #485260,
+    #4e515e,
+    #787983,
+    #a3a3ab,
+    #d0d0d4,
+    #ffffff
+  );
+}
+
+.card {
+  height: 100vh;
+  color: white;
+  border-radius: 20px;
+  background-color: #1a2130;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge specific - hide scrollbar */
+  scrollbar-width: none; /* Firefox specific - hide scrollbar */
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  /* background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png"); */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px; /* Adjust the gap between cards as needed */
+}
+
+.card::-webkit-scrollbar {
+  display: none; /* Webkit (Chrome, Safari, etc.) specific - hide scrollbar */
+}
+
+.btn {
+  transition-duration: 0.2s;
+  color: white;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0px 0px 10px 12px rgba(8, 0, 0, 0.5);
+
+  /* background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png"); */
+}
+
+img {
+  box-shadow: 0px 0px 10px 12px rgba(8, 0, 0, 0.5);
+  transition: transform 0.8s ease-out;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+  img {
+    /* Adjust dimensions as needed for mobile */
+    max-width: 100%; /* Ensure image fits within screen width */
+    width: 200px;
+    height: 200px;
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+.react-player {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-inner {
+  box-shadow: 0px 0px 10px 12px rgba(8, 0, 0, 0.5);
+}
