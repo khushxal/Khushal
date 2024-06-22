@@ -14,7 +14,6 @@ function About() {
                 alt="My Image"
                 height={500}
                 width={500}
-                loading="eager"
               />
             </div>
             <div className="col-lg-6 order-lg-2 col-md-12">
