@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../css/Contact.css";
 import img from "../images/contactme.jpeg";
+import { toast } from "react-toastify";
 function Contact() {
   const [details, setDetails] = useState({});
 
@@ -18,6 +19,11 @@ function Contact() {
   function handleSubmit(e) {
     try {
       e.preventDefault();
+      if (details) {
+        toast.success("Your contact details reached to me.");
+      } else {
+        toast.error("Filling the form is mandatory.");
+      }
       setDetails({
         email: "",
         phone: "",

@@ -31,19 +31,14 @@ function Home() {
                 >
                   Hire Me
                 </button>
-                <button
-                  type="button"
-                  className="btn btn-outline-secondary btn-lg px-4"
-                >
-                  <Link
-                    to="contact"
-                    smooth={true}
-                    duration={200}
-                    onClick={() => setIsMobile(false)}
+                <Link to="contact" smooth={true} duration={200}>
+                  <button
+                    type="button"
+                    className="btn btn-outline-secondary btn-lg px-4"
                   >
                     Contact
-                  </Link>
-                </button>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
