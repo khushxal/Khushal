@@ -37,7 +37,6 @@ function Home() {
                 >
                   <Link
                     to="contact"
-                    className="nav-link"
                     smooth={true}
                     duration={200}
                     onClick={() => setIsMobile(false)}
