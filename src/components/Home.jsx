@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import img from "../images/img_edit.png";
 import "../css/Home.css";
 function Home() {
@@ -34,7 +35,15 @@ function Home() {
                   type="button"
                   className="btn btn-outline-secondary btn-lg px-4"
                 >
-                  Contact
+                  <Link
+                    to="contact"
+                    className="nav-link"
+                    smooth={true}
+                    duration={200}
+                    onClick={() => setIsMobile(false)}
+                  >
+                    Contact
+                  </Link>
                 </button>
               </div>
             </div>
