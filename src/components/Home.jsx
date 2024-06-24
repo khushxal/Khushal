@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-scroll";
 import img from "../images/img_edit.png";
 import "../css/Home.css";
+import { LiaDownloadSolid } from "react-icons/lia";
+import { MdOutlineConnectWithoutContact } from "react-icons/md";
 function Home() {
   return (
     <div id="home" className="container">
@@ -25,18 +27,22 @@ function Home() {
               </h1>
               <p className="lead">I am a Coder, Developer and Engineer</p>
               <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-                <button
-                  type="button"
-                  className="btn btn-outline-secondary btn-lg px-4 me-md-2"
-                >
-                  Hire Me
-                </button>
+                <a href="CVKhushal.pdf" download={true}>
+                  <button
+                    type="button"
+                    className="btn btn-outline-secondary btn-lg px-4 me-md-2"
+                  >
+                    <LiaDownloadSolid className="me-1 fs-3" />
+                    Hire Me
+                  </button>
+                </a>
                 <Link to="contact" smooth={true} duration={200}>
                   <button
                     type="button"
                     className="btn btn-outline-secondary btn-lg px-4"
                   >
-                    Contact
+                    <MdOutlineConnectWithoutContact className="me-1 fs-3" />
+                    Connect
                   </button>
                 </Link>
               </div>
