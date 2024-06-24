@@ -2,25 +2,30 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import "../css/Navbar.css";
 
-function Navbar() {
+const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleToggleMenu = () => {
-    setIsMobile(!isMobile);
+    setIsMobile(!isMobile); // Toggle mobile menu state
   };
 
   return (
     <div className="container">
-      <nav className="navbar navbar-expand-md">
+      <nav className="navbar navbar-expand-lg ">
         <div className="container">
           <button
-            className="navbar-toggler bg-light"
+            className="navbar-toggler"
             type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
             onClick={handleToggleMenu}
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon" />
           </button>
-          <div className={`collapse navbar-collapse ${isMobile ? "show" : ""}`}>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto">
               <li className="nav-item">
                 <Link
@@ -28,7 +33,7 @@ function Navbar() {
                   className="nav-link"
                   smooth={true}
                   duration={200}
-                  onClick={() => setIsMobile(false)}
+                  onClick={() => setIsMobile(false)} // Close menu on link click
                 >
                   Home
                 </Link>
@@ -39,7 +44,7 @@ function Navbar() {
                   className="nav-link"
                   smooth={true}
                   duration={200}
-                  onClick={() => setIsMobile(false)}
+                  onClick={() => setIsMobile(false)} // Close menu on link click
                 >
                   About
                 </Link>
@@ -50,7 +55,7 @@ function Navbar() {
                   className="nav-link"
                   smooth={true}
                   duration={200}
-                  onClick={() => setIsMobile(false)}
+                  onClick={() => setIsMobile(false)} // Close menu on link click
                 >
                   Skills
                 </Link>
@@ -61,7 +66,7 @@ function Navbar() {
                   className="nav-link"
                   smooth={true}
                   duration={200}
-                  onClick={() => setIsMobile(false)}
+                  onClick={() => setIsMobile(false)} // Close menu on link click
                 >
                   Projects
                 </Link>
@@ -72,7 +77,7 @@ function Navbar() {
                   className="nav-link"
                   smooth={true}
                   duration={200}
-                  onClick={() => setIsMobile(false)}
+                  onClick={() => setIsMobile(false)} // Close menu on link click
                 >
                   Contact
                 </Link>
@@ -83,6 +88,6 @@ function Navbar() {
       </nav>
     </div>
   );
-}
+};
 
 export default Navbar;

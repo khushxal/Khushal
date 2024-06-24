@@ -1,15 +1,13 @@
-/* Navbar.css */
-
 .navbar {
   background-color: #1a2130; /* Background color */
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Box shadow */
   z-index: 1000; /* Ensures it stays above other content */
   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
-  border-radius: 20px;
+  border-radius: 20px; /* Rounded corners */
 }
 
 .navbar-toggler {
-  border: none; /* Remove border from toggler */
+  background-color: white;
 }
 
 .navbar-nav .nav-link {
@@ -24,25 +22,4 @@
   color: black;
   border-radius: 30px; /* Apply border radius on hover */
   cursor: pointer;
-}
-
-@media (max-width: 767px) {
-  .navbar-nav {
-    background-color: #1a2130; /* Background color for mobile nav */
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 56px; /* Adjust based on your navbar height */
-    display: none; /* Initially hide on smaller screens */
-  }
-
-  .navbar-nav.show {
-    display: flex !important; /* Show when toggler is clicked */
-    flex-direction: column;
-  }
-
-  .navbar-nav .nav-link {
-    padding: 10px 15px; /* Padding for links */
-    text-align: center; /* Center align text */
-  }
 }
