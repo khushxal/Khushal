@@ -39,9 +39,9 @@ function Contact() {
           <h2>Contact Me</h2>
           <hr />
           <div className="row mt-2">
-            <div class="col-12 col-md-6 mx-auto">
-              <div class="card" id="contact-card">
-                <div class="card-img text-center">
+            <div className="col-12 col-md-6 mx-auto">
+              <div className="card" id="contact-card">
+                <div className="card-img text-center">
                   <img
                     id="contact-card-img"
                     src={img}
@@ -50,13 +50,13 @@ function Contact() {
                     height="100%"
                   />
                 </div>
-                <div class="card-body">
+                <div className="card-body">
                   <form onSubmit={handleSubmit}>
-                    <div class="form-group">
-                      <div class="mb-3">
+                    <div className="form-group">
+                      <div className="mb-3">
                         <label
-                          for="exampleFormControlInput1"
-                          class="form-label"
+                          htmlFor="exampleFormControlInput1"
+                          className="form-label"
                         >
                           Email address
                         </label>
@@ -67,13 +67,12 @@ function Contact() {
                           id="exampleFormControlInput1"
                           onChange={handleChange}
                           value={details.email}
-                          email={true}
                         />
                       </div>
-                      <div class="mb-3">
+                      <div className="mb-3">
                         <label
-                          for="exampleFormControlInput1"
-                          class="form-label"
+                          htmlFor="exampleFormControlInput1"
+                          className="form-label"
                         >
                           Phone
                         </label>
@@ -84,8 +83,6 @@ function Contact() {
                           id="exampleFormControlInput1"
                           onChange={handleChange}
                           value={details.phone}
-                          minLength={10}
-                          maxLength={10}
                         />
                       </div>
                     </div>

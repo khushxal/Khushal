@@ -1,1 +1,17 @@
+.blinking-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 24px;
+  background-color: black;
+  animation: blink 1s step-end infinite;
+}
 
+@keyframes blink {
+  from,
+  to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: black;
+  }
+}
