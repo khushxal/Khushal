@@ -49,7 +49,7 @@ function Home() {
                 Khushal Verma
               </h1>
               <p className="lead">
-                I am <span>{currentText} </span>
+                I am <span>{currentText}</span>
                 <span className="blinking-cursor"></span>
               </p>
               <div className="d-grid gap-2 d-md-flex justify-content-md-start">
