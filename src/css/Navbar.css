@@ -5,6 +5,7 @@
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Box shadow */
   z-index: 1000; /* Ensures it stays above other content */
   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  border-radius: 20px;
 }
 
 .navbar-toggler {
