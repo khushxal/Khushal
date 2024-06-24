@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import "../css/Navbar.css";
 
-const Navbar = () => {
+function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleToggleMenu = () => {
@@ -88,6 +88,6 @@ const Navbar = () => {
       </nav>
     </div>
   );
-};
+}
 
 export default Navbar;
