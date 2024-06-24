@@ -5,17 +5,30 @@ import "../css/Home.css";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { MdOutlineConnectWithoutContact } from "react-icons/md";
 function Home() {
-  const texts = ["Coder", "Developer", "Engineer"];
+  const texts = ["a Coder.", "a Developer.", "an Engineer."];
+
+  const [currentText, setCurrentText] = useState("");
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    }, 2000);
+  const [charIndex, setCharIndex] = useState(0);
 
-    return () => clearInterval(interval);
-  }, [texts.length]);
+  useEffect(() => {
+    if (charIndex < texts[currentIndex].length) {
+      const timeout = setTimeout(() => {
+        setCurrentText((prev) => prev + texts[currentIndex][charIndex]);
+        setCharIndex((prev) => prev + 1);
+      }, 100);
+      return () => clearTimeout(timeout);
+    } else {
+      const timeout = setTimeout(() => {
+        setCurrentText("");
+        setCharIndex(0);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
+      }, 2000);
+      return () => clearTimeout(timeout);
+    }
+  }, [charIndex, currentIndex, texts]);
 
   return (
     <div id="home" className="container">
@@ -36,7 +49,7 @@ function Home() {
                 Khushal Verma
               </h1>
               <p className="lead">
-                I am a <span>{texts[currentIndex]}</span>
+                I am <span>{currentText} </span>
                 <span className="blinking-cursor"></span>
               </p>
               <div className="d-grid gap-2 d-md-flex justify-content-md-start">

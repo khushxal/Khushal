@@ -1,9 +1,9 @@
 .blinking-cursor {
   display: inline-block;
-  width: 10px;
-  height: 24px;
-  background-color: black;
-  animation: blink 1s step-end infinite;
+  width: 5px;
+  height: 20px;
+  background-color: white;
+  animation: blink 0.5s step-end infinite;
 }
 
 @keyframes blink {
@@ -12,6 +12,6 @@
     background-color: transparent;
   }
   50% {
-    background-color: black;
+    background-color: white;
   }
 }
