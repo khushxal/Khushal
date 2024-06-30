@@ -94,16 +94,16 @@ function Contact() {
               </div>
             </div>
           </div>
-          <div className="fs-3 mx-auto my-auto">
-            <span className="fs-2 text-danger">
+          <div className="my-auto">
+            <span className="fs-3 text-danger">
               Note <br />
             </span>
             I haven't handled the form data till, but i will if you give me a
-            chance to showcase my skill.
-            <div>
-              📲 : <a href="tel:+908602352536">8602352536</a>
+            chance to showcase my skill. Contact Me.
+            <div className="fs-2">
+              📲 : <a href="tel:+918602352536">8602352536</a>
             </div>
-            <div>
+            <div className="fs-2">
               📩 :{" "}
               <a href="mailto:vkkhushal18@gmail.com?subject=Interested%20in%20Your%20Profile&body=Hello%20[Your%20Name],%0D%0A%0D%0AI%20am%20interested%20in%20your%20profile%20and%20would%20like%20to%20know%20more%20about%20your%20experience%20and%20projects.%20Please%20let%20me%20know%20a%20convenient%20time%20to%20discuss%20further.%0D%0A%0D%0AThank%20you,%0D%0A[Visitor's%20Name]">
                 vkkhushal18@gmail.com
