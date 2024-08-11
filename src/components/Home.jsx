@@ -53,7 +53,7 @@ function Home() {
                 <span className="blinking-cursor"></span>
               </p>
               <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-                <a href="CVKhushal.pdf" download={true}>
+                <a href="Resume.pdf" download={true}>
                   <button
                     type="button"
                     className="btn btn-outline-secondary btn-lg px-4 me-md-2"
