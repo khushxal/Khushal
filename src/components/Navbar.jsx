@@ -15,12 +15,11 @@ function Navbar() {
         <div className="container">
           <button
             className="navbar-toggler"
-            type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+            // aria-controls="navbarSupportedContent"
+            // aria-expanded="false"
+            // aria-label="Toggle navigation"
             onClick={handleToggleMenu}
           >
             <span className="navbar-toggler-icon" />
