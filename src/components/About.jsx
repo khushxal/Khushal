@@ -5,22 +5,20 @@ function About() {
   return (
     <div id="about" className="container">
       <div className="card my-1">
-        <div className="cover-container d-flex p-3 mx-auto my-auto flex-column">
+        <div className="cover-container d-flex p-3 mx-auto flex-column">
           <div className="row align-items-center g-0 py-5">
-            <div className="col-lg-6 order-lg-1 col-md-12 mb-4 mb-lg-0">
+            <div className="col-lg-4 order-lg-1 col-12 mb-4 mb-lg-0 text-center">
               <img
                 src={imgComputer}
-                className="d-block mx-lg-auto img-fluid rounded-1"
+                className="img-fluid rounded-1 w-75"
                 alt="My Image"
-                height={500}
-                width={500}
               />
             </div>
-            <div className="col-lg-6 order-lg-2 col-md-12">
+            <div className="col-lg-7 order-lg-2 col-12 text-center text-lg-start">
               <h2>About Me</h2>
-              <div className="fs-4 me-5 text-start">
+              <div className="fs-4" style={{ textAlign: "justify" }}>
                 <hr />
-                This is me Khushal Verma. Currently persuing B.Tech in Computer
+                This is me Khushal Verma. Currently pursuing B.Tech in Computer
                 Science Engineering from Medi-Caps University. I am a passionate
                 learner. Over this college journey, I've honed my skills in
                 various technologies and tools. I thrive on creating seamless

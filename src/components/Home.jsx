@@ -34,16 +34,17 @@ function Home() {
     <div id="home" className="container">
       <div className="card my-1">
         <div className="cover-container d-flex p-3 mx-auto my-auto flex-column">
-          <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div className="col-lg-6 order-lg-1 col-md-12 mb-4 mb-lg-0 ">
+          <div className="row flex-lg-row-reverse align-items-center justify-content-center g-5 py-5">
+            <div className="col-lg-6 order-lg-1 col-md-12 mb-4 mb-lg-0 d-flex justify-content-center">
               <img
                 src={img}
-                className="d-block mx-lg-auto img-fluid rounded-5"
+                className="img-fluid rounded-5"
+                style={{ width: "100%", maxWidth: "600px" }} // Adjust maxWidth as needed
                 alt="Bootstrap Themes"
                 loading="eager"
               />
             </div>
-            <div className="col-lg-6 order-lg-2 col-md-12">
+            <div className="col-lg-6 order-lg-2 col-md-12 text-center">
               <h1 className="display-5 mb-2">
                 I'm <br />
                 Khushal Verma
@@ -52,25 +53,34 @@ function Home() {
                 I am <span>{currentText}</span>
                 <span className="blinking-cursor"></span>
               </p>
-              <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-                <a href="Resume.pdf" download={true}>
-                  <button
-                    type="button"
-                    className="btn btn-outline-secondary btn-lg px-4 me-md-2"
+              <div className="row">
+                <div className="col-12 col-md-6 mb-2 mb-md-0">
+                  <a href="Resume.pdf" download={true} className="w-100">
+                    <button
+                      type="button"
+                      className="btn btn-outline-secondary btn-lg w-100"
+                    >
+                      <LiaDownloadSolid className="me-1 fs-3" />
+                      Hire Me
+                    </button>
+                  </a>
+                </div>
+                <div className="col-12 col-md-6">
+                  <Link
+                    to="contact"
+                    smooth={true}
+                    duration={200}
+                    className="w-100"
                   >
-                    <LiaDownloadSolid className="me-1 fs-3" />
-                    Hire Me
-                  </button>
-                </a>
-                <Link to="contact" smooth={true} duration={200}>
-                  <button
-                    type="button"
-                    className="btn btn-outline-secondary btn-lg px-4"
-                  >
-                    <MdOutlineConnectWithoutContact className="me-1 fs-3" />
-                    Connect
-                  </button>
-                </Link>
+                    <button
+                      type="button"
+                      className="btn btn-outline-secondary btn-lg w-100"
+                    >
+                      <MdOutlineConnectWithoutContact className="me-1 fs-3" />
+                      Connect
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

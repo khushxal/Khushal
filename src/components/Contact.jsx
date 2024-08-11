@@ -46,8 +46,6 @@ function Contact() {
                     id="contact-card-img"
                     src={img}
                     alt="This is contact image"
-                    width="100%"
-                    height="100%"
                   />
                 </div>
                 <div className="card-body">

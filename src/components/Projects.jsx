@@ -1,31 +1,27 @@
 import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 function Projects() {
-  const videos = [
-    {
-      id: 1,
-      src: "video1.mp4",
-      alt: "First video",
-    },
-    {
-      id: 2,
-      src: "video2.mp4",
-      alt: "Second video",
-    },
-    {
-      id: 3,
-      src: "video3.mp4",
-      alt: "Third video",
-    },
-  ];
-
-  // const [videos, setVideos] = useState([]);
-  // const [videosSet, isVideosSet] = useState(false``);
+  const [videos, setVideos] = useState([]);
+  const [fetchData, setFetchData] = useState(true);
   const [currentPage, setCurrentPage] = useState(0);
 
-  // useEffect(async function () {
-  //   const res = await fetch("/videos.json");
-  // }, []);
+  async function getAllProjects() {
+    try {
+      const res = await fetch("./project.json");
+      const data = await res.json();
+      setVideos(await data);
+      setFetchData(false);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(
+    function () {
+      getAllProjects();
+    },
+    [fetchData]
+  );
 
   const handlePrev = () => {
     setCurrentPage((prevPage) =>
@@ -40,18 +36,17 @@ function Projects() {
   };
 
   return (
-    <div id="projects" className="container">
+    <div id="projects" className="container py-5">
       <div className="card">
-        <div className="cover-container p-3 w-100 mx-auto d-flex flex-column">
-          <h2>Project Works</h2>
+        <div className="cover-container p-3 mx-auto d-flex flex-column">
+          <h2 className="mb-4">Project Works</h2>
           <hr />
           <div
             id="carouselExampleControls"
-            className="carousel slide p-1 m-0"
+            className="carousel slide"
             data-bs-ride="carousel"
-            data-bs-interval="10000"
           >
-            <div className="carousel-inner h-100">
+            <div className="carousel-inner">
               {videos.map((video, index) => (
                 <div
                   key={index}
@@ -59,12 +54,13 @@ function Projects() {
                     index === currentPage ? "active" : ""
                   }`}
                 >
-                  <ReactPlayer
-                    url={video.src}
-                    className="react-player d-block w-100 "
-                    controls
-                    width="100%"
-                    height="100%"
+                  <video
+                    src={video.src}
+                    className="d-block w-100"
+                    autoPlay
+                    muted
+                    loop
+                    // style={{ height: "50vh", maxHeight: "500px" }} // Responsive height
                   />
                   <div className="carousel-caption d-none d-md-block">
                     <h5>{video.alt}</h5>
@@ -75,25 +71,40 @@ function Projects() {
             <button
               className="carousel-control-prev"
               type="button"
+              data-bs-slide="prev"
               onClick={handlePrev}
             >
-              {/* <span
+              <span
                 className="carousel-control-prev-icon"
                 aria-hidden="true"
-              ></span> */}
-              <span className="">Previous</span>
+              ></span>
+              <span className="visually-hidden">Previous</span>
             </button>
             <button
               className="carousel-control-next"
               type="button"
+              data-bs-slide="next"
               onClick={handleNext}
             >
-              <span className="">Next</span>
-              {/* <span
+              <span
                 className="carousel-control-next-icon"
                 aria-hidden="true"
-              ></span> */}
+              ></span>
+              <span className="visually-hidden">Next</span>
             </button>
+          </div>
+          <div className="mt-4 w-100">
+            {videos.map((video, index) => (
+              <div
+                key={index}
+                className={`description ${
+                  index === currentPage ? "" : "d-none"
+                }`}
+              >
+                <h3 className="text-center">{video.title}</h3>
+                <p className="text-justify">{video.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

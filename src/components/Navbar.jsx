@@ -17,9 +17,9 @@ function Navbar() {
             className="navbar-toggler"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
-            // aria-controls="navbarSupportedContent"
-            // aria-expanded="false"
-            // aria-label="Toggle navigation"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
             onClick={handleToggleMenu}
           >
             <span className="navbar-toggler-icon" />
