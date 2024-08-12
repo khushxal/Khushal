@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "src": "video1.mp4",
+    "title": "First video",
+    "description": ""
+  },
+  {
+    "id": "2",
+    "src": "video2.mp4",
+    "title": "Second video",
+    "description": ""
+  },
+  {
+    "id": "3",
+    "src": "video3.mp4",
+    "title": "Third video",
+    "description": ""
+  }
+]
