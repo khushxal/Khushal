@@ -36,7 +36,7 @@ function Projects() {
   };
 
   return (
-    <div id="projects" className="container py-5">
+    <div id="projects" className="container">
       <div className="card">
         <div className="cover-container p-3 mx-auto d-flex flex-column">
           <h2 className="mb-4">Project Works</h2>
