@@ -14,7 +14,7 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg ">
         <div className="container">
           <button
-            className="navbar-toggler"
+            className="navbar-toggler bg-opacity-25"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
