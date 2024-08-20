@@ -31,9 +31,9 @@ function About() {
               technologies and tools throughout my college journey. I excel in
               crafting seamless user experiences and developing scalable,
               high-performance solutions. Outside of my academic and technical
-              endeavors, I immerse myself in cricket, beatboxing, and other
-              pursuits that reinvigorate my creativity and fuel my relentless
-              passion for innovation
+              endeavors, I immerse myself in cricket, beatboxing(Boots and
+              Cats), and other pursuits that reinvigorate my creativity and fuel
+              my relentless passion for innovation
             </div>
           </div>
         </div>
