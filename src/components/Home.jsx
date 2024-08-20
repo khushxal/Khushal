@@ -39,7 +39,7 @@ function Home() {
               src={img}
               className="img-fluid"
               style={{
-                width: "50%",
+                width: "60%",
                 maxWidth: "600px",
               }} // Adjust maxWidth as needed
               alt="Bootstrap Themes"

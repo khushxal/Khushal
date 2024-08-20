@@ -75,6 +75,7 @@ img {
 
 .img-fluid {
   border-radius: 48%;
+  mix-blend-mode: exclusion;
 }
 
 /* img:hover {
