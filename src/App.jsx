@@ -20,7 +20,7 @@ function App() {
       <Contact />
       <Footer />
       <SocialMediaHandle />
-      <ToastContainer />
+      <ToastContainer theme="dark" />
     </div>
   );
 }

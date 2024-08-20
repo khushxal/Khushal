@@ -99,7 +99,7 @@ function Contact() {
                 <p className="text-danger mt-3">Note</p>
                 <p>
                   I haven't handled the form data till, but i will if you give
-                  me a chance to showcase my skill. Contact Me.
+                  me a chance to showcase my skills.
                 </p>
               </div>
             </div>
