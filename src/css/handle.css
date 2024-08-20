@@ -1,0 +1,9 @@
+.handle {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  height: max-content;
+  width: 50px;
+  transform: translateY(-50%);
+  border-radius: 10px;
+}

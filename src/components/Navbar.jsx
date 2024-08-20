@@ -25,7 +25,7 @@ function Navbar() {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mx-auto">
+            <ul className="navbar-nav mx-auto text-center">
               <li className="nav-item">
                 <Link
                   to="home"

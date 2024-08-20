@@ -37,75 +37,71 @@ function Projects() {
 
   return (
     <div id="projects" className="container">
-      <div className="card">
-        <div className="cover-container p-3 mx-auto d-flex flex-column">
-          <h2 className="mb-4">Project Works</h2>
-          <hr />
-          <div
-            id="carouselExampleControls"
-            className="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div className="carousel-inner">
-              {videos.map((video, index) => (
-                <div
-                  key={index}
-                  className={`carousel-item ${
-                    index === currentPage ? "active" : ""
-                  }`}
-                >
-                  <video
-                    src={video.src}
-                    className="d-block w-100"
-                    autoPlay
-                    muted
-                    loop
-                    // style={{ height: "50vh", maxHeight: "500px" }} // Responsive height
-                  />
-                  <div className="carousel-caption d-none d-md-block">
-                    <h5>{video.alt}</h5>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <button
-              className="carousel-control-prev"
-              type="button"
-              data-bs-slide="prev"
-              onClick={handlePrev}
-            >
-              <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Previous</span>
-            </button>
-            <button
-              className="carousel-control-next"
-              type="button"
-              data-bs-slide="next"
-              onClick={handleNext}
-            >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Next</span>
-            </button>
-          </div>
-          <div className="mt-4 w-100">
+      <div className="cover-container p-3 mx-auto d-flex flex-column">
+        <h2 className="mb-4">Project Works</h2>
+        <hr />
+        <div
+          id="carouselExampleControls"
+          className="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-inner">
             {videos.map((video, index) => (
               <div
                 key={index}
-                className={`description ${
-                  index === currentPage ? "" : "d-none"
+                className={`carousel-item ${
+                  index === currentPage ? "active" : ""
                 }`}
               >
-                <h3 className="text-center">{video.title}</h3>
-                <p className="text-justify">{video.description}</p>
+                <video
+                  src={video.src}
+                  className="d-block w-100"
+                  autoPlay
+                  muted
+                  loop
+                  // style={{ height: "50vh", maxHeight: "500px" }} // Responsive height
+                />
+                <div className="carousel-caption d-none d-md-block">
+                  <h5>{video.alt}</h5>
+                </div>
               </div>
             ))}
           </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-slide="prev"
+            onClick={handlePrev}
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-slide="next"
+            onClick={handleNext}
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div className="mt-4 w-100">
+          {videos.map((video, index) => (
+            <div
+              key={index}
+              className={`description ${index === currentPage ? "" : "d-none"}`}
+            >
+              <h3 className="text-center">{video.title}</h3>
+              <p className="text-justify">{video.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

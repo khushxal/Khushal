@@ -1,12 +1,15 @@
 * {
   font-family: "Poppins";
-  text-shadow: 0px 6px 5px rgb(6, 6, 6);
+  /* font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; */
+  margin: 0;
+  padding: 0;
+  color: white;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right top,
     #fdffe2,
     #c0d4be,
@@ -20,6 +23,12 @@ body {
     #a3a3ab,
     #d0d0d4,
     #ffffff
+  ); */
+  background: rgb(0, 138, 215);
+  background: radial-gradient(
+    circle,
+    rgb(0, 71, 109) 0%,
+    rgba(0, 0, 0, 0.596) 100%
   );
 }
 
@@ -60,13 +69,17 @@ body {
 }
 
 img {
-  box-shadow: 0px 0px 10px 12px rgba(8, 0, 0, 0.5);
+  /* box-shadow: 0px 0px 5px 2px rgba(8, 0, 0, 0.5); */
   transition: transform 0.8s ease-out;
 }
 
-img:hover {
-  transform: scale(1.1);
+.img-fluid {
+  border-radius: 50%;
 }
+
+/* img:hover {
+  transform: scale(1.1);
+} */
 
 @media (max-width: 767px) {
   img {
@@ -85,4 +98,9 @@ img:hover {
 
 .carousel-inner {
   box-shadow: 0px 0px 10px 12px rgba(8, 0, 0, 0.5);
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }

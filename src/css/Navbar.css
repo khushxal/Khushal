@@ -1,11 +1,13 @@
 .navbar {
-  background-color: #1a2130; /* Background color */
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Box shadow */
+  /* background-color: #1a2130; Background color */
+  /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); Box shadow */
   z-index: 1000;
-  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  /* background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png"); */
   border-radius: 20px; /* Rounded corners */
   position: sticky;
   top: 0;
+  left: 0;
+  right: 0;
 }
 
 .navbar-toggler {
