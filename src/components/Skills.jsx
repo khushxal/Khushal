@@ -28,14 +28,14 @@ function Skills() {
       <div className="cover-container d-flex p-3 mx-auto my-auto flex-column">
         <h2>Skills</h2>
         <hr />
-        <div className="row row-cols-1 row-cols-md-3 g-4">
+        <div className="row row-cols-1 row-cols-lg-2 g-4">
           {skills.map((skill, index) => (
             <div key={index} className="col">
-              <div className="card h-100 mx-auto">
+              <div className="glass h-100 p-5">
                 <img
                   id="skill-card-img"
                   src={skill.icon}
-                  className="card-img-top my-2 mx-auto"
+                  className="card-img-top"
                   alt={skill.skill}
                 />
                 <hr />

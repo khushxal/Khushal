@@ -1,13 +1,12 @@
 .col > .card {
   height: auto;
   width: auto;
-  border: solid white;
-  transition-duration: 0.4s;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: transform 1s ease-in-out;
 }
 
 .col > .card:hover {
-  /* box-shadow:  rgb(0, 0, 0); */
-  box-shadow: 0px 0px 10px 12px rgba(8, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 10px rgba(8, 0, 0, 0.5);
 }
 
 .card-img-top {

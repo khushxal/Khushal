@@ -1,14 +1,11 @@
 * {
   font-family: "Poppins";
-  /* font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; */
   margin: 0;
   padding: 0;
-  color: white;
+  color: aliceblue;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   /* background-image: linear-gradient(
     to right top,
     #fdffe2,
@@ -32,6 +29,11 @@ body {
   );
 }
 
+#about {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
 .card {
   height: 100vh;
   color: white;
@@ -42,7 +44,6 @@ body {
   -ms-overflow-style: none; /* IE and Edge specific - hide scrollbar */
   scrollbar-width: none; /* Firefox specific - hide scrollbar */
   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
-  /* background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png"); */
 }
 
 .grid-container {
@@ -56,31 +57,22 @@ body {
 }
 
 .btn {
-  transition-duration: 0.2s;
+  transition-duration: 0.5s;
   color: white;
 }
 
 .btn:hover {
-  background-color: white;
-  color: black;
-  box-shadow: 0px 0px 10px 12px rgba(8, 0, 0, 0.5);
-
-  /* background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png"); */
+  background-color: black;
 }
 
 img {
-  /* box-shadow: 0px 0px 5px 2px rgba(8, 0, 0, 0.5); */
-  transition: transform 0.8s ease-out;
+  transition: transform 1s ease-out;
 }
 
 .img-fluid {
   border-radius: 48%;
   mix-blend-mode: exclusion;
 }
-
-/* img:hover {
-  transform: scale(1.1);
-} */
 
 @media (max-width: 767px) {
   img {
@@ -104,4 +96,14 @@ img {
 a {
   text-decoration: none;
   color: white;
+}
+
+/* this is glass effect */
+
+.glass {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 5px 2px black;
+  height: auto;
 }

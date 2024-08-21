@@ -1,8 +1,5 @@
 .navbar {
-  /* background-color: #1a2130; Background color */
-  /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); Box shadow */
   z-index: 1000;
-  /* background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png"); */
   border-radius: 20px; /* Rounded corners */
   position: sticky;
   top: 0;
@@ -11,7 +8,8 @@
 }
 
 .navbar-toggler {
-  background-color: white;
+  background: rgb(0, 138, 215);
+  background: linear-gradient(rgb(0, 71, 109) 0%, rgba(0, 0, 0, 0.596) 100%);
 }
 
 .navbar-nav .nav-link {
