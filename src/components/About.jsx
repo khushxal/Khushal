@@ -1,6 +1,5 @@
 import React from "react";
 import imgComputer from "../images/aboutme.jpeg";
-
 function About() {
   return (
     <div id="about" className="container">
@@ -25,15 +24,16 @@ function About() {
               of work, I enjoy cricket, beatbox and more. These activities not
               only provide a much-needed break from the screen but also inspire
               my creativity and fuel my passion for innovation. */}
-              I'm Khushal Verma, a B.Tech student in Computer Science
-              Engineering at Medi-Caps University. As a dedicated and passionate
-              learner, I have sharpened my skills across a broad range of
-              technologies and tools throughout my college journey. I excel in
-              crafting seamless user experiences and developing scalable,
-              high-performance solutions. Outside of my academic and technical
-              endeavors, I immerse myself in cricket, beatboxing(Boots and
-              Cats), and other pursuits that reinvigorate my creativity and fuel
-              my relentless passion for innovation
+              I'm Khushal Verma, a <strong>B.Tech</strong> student in{" "}
+              <strong>Computer Science Engineering</strong> at{" "}
+              <strong>Medi-Caps University</strong>. As a dedicated and
+              passionate learner, I have sharpened my skills across a broad
+              range of technologies and tools throughout my college journey. I
+              excel in crafting seamless user experiences and developing
+              scalable, high-performance solutions. Outside of my academic and
+              technical endeavors, I immerse myself in cricket, beatboxing(Boots
+              and Cats), and other pursuits that reinvigorate my creativity and
+              fuel my relentless passion for innovation
             </div>
           </div>
         </div>

@@ -40,7 +40,9 @@ function Skills() {
                 />
                 <hr />
                 <div className="card-body">
-                  <h5 className="card-title">{skill.skill}</h5>
+                  <h5 className="card-title">
+                    <strong>{skill.skill}</strong>{" "}
+                  </h5>
                   <p className="card-text">{skill.description}</p>
                 </div>
               </div>
