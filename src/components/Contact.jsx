@@ -86,7 +86,7 @@ function Contact() {
           </div>
         </div>
         <div className="row mt-5">
-          <div className="d-flex justify-content-evenly">
+          <div className="d-lg-flex justify-content-evenly">
             <div className="fs-3">
               📲 : <a href="tel:+918602352536">8602352536</a>
             </div>
