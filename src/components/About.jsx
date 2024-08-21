@@ -4,7 +4,7 @@ import imgComputer from "../images/aboutme.jpeg";
 function About() {
   return (
     <div id="about" className="container">
-      <div className="cover-container d-flex p-3 mx-auto flex-column">
+      <div className="cover-container about-cover-container d-flex p-2 flex-column">
         <div className="row align-items-center g-0 py-5">
           <div className="col-lg-4 order-lg-1 col-12 mb-4 mb-lg-0 text-center">
             <img
