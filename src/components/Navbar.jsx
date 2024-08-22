@@ -10,7 +10,7 @@ function Navbar() {
   };
 
   return (
-    <div className="container">
+    <div className="container hidden">
       <nav className="navbar navbar-expand-lg ">
         <div className="container">
           <button
