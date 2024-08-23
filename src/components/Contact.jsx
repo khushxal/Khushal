@@ -1,33 +1,53 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import "../css/Contact.css";
 
 import { toast } from "react-toastify";
 function Contact() {
-  const [details, setDetails] = useState({});
+  // const [details, setDetails] = useState({
+  //   email: "",
+  //   name: "",
+  //   phone: "",
+  // });
 
-  function handleChange(e) {
-    try {
-      const { name, value } = e.target;
-      setDetails((prevDetail) => {
-        return { ...prevDetail, [name]: value };
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  const form = useRef();
+
+  // function handleChange(e) {
+  //   try {
+  //     const { name, value } = e.target;
+  //     setDetails((prevDetail) => {
+  //       return { ...prevDetail, [name]: value };
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 
   function handleSubmit(e) {
     try {
       e.preventDefault();
-      if (details.email && details.phone) {
-        toast.success("Your contact details reached to me.");
-      } else {
-        toast.error("Filling the form is mandatory.");
-      }
-      setDetails({
-        email: "",
-        phone: "",
-      });
+      // if (details.email && details.phone && details.name) {
+      // } else {
+      // }
+      emailjs
+        .sendForm("service_anrhncp", "template_lm45ggj", form.current, {
+          publicKey: "oeXkWQVwg_DMbLTrJ",
+        })
+        .then(
+          () => {
+            toast.success("Your contact details reached to me.");
+          },
+          (error) => {
+            toast.error("Filling the form is mandatory.");
+          }
+        );
+
+      // setDetails({
+      //   email: "",
+      //   name: "",
+      //   phone: "",
+      // });
+      e.target.reset();
     } catch (err) {
       console.log(err);
     }
@@ -40,7 +60,7 @@ function Contact() {
         <div className="row mt-2">
           <div className="col-lg-6 glass mx-auto p-3">
             <div className="card-body">
-              <form onSubmit={handleSubmit}>
+              <form ref={form} onSubmit={handleSubmit} autoComplete="off">
                 <div className="form-group">
                   <div className="mb-3">
                     <label
@@ -54,8 +74,24 @@ function Contact() {
                       name="email"
                       className="form-control"
                       id="exampleFormControlInput1"
-                      onChange={handleChange}
-                      value={details.email}
+                      // onChange={handleChange}
+                      // value={details.email}
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label
+                      htmlFor="exampleFormControlInput1"
+                      className="form-label"
+                    >
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      className="form-control"
+                      id="exampleFormControlInput1"
+                      // onChange={handleChange}
+                      // value={details.name}
                     />
                   </div>
                   <div className="mb-3">
@@ -70,13 +106,15 @@ function Contact() {
                       name="phone"
                       className="form-control"
                       id="exampleFormControlInput1"
-                      onChange={handleChange}
-                      value={details.phone}
+                      // onChange={handleChange}
+                      // value={details.phone}
                     />
                   </div>
                 </div>
                 <div className="text-center">
-                  <button className="btn">Submit</button>
+                  <button className="btn" type="submit">
+                    Submit
+                  </button>
                 </div>
               </form>
             </div>
@@ -94,13 +132,6 @@ function Contact() {
               vkkhushal18@gmail.com
             </a>
           </div>
-        </div>
-        <div className="fs-5">
-          <p className="text-danger mt-3">Note</p>
-          <p>
-            I haven't handled the form data till, but i will if you give me a
-            chance to showcase my skills.
-          </p>
         </div>
       </div>
     </div>
