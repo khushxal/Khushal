@@ -2,14 +2,16 @@
   {
     "id": "1",
     "src": "video1.mp4",
-    "title": "First video",
-    "description": ""
+    "title": "CountWithMe",
+    "description": "CountWithMe is a simple yet powerful web app built using React.js that serves as a counter tally. The app allows users to increment or decrement a numerical value with each count. It features an intuitive interface where users can easily adjust the counter using increment and decrement buttons. The app is designed for tasks that require keeping track of counts or tallying numbers, making it versatile for various everyday needs, from tracking inventory to counting repetitions in exercises. CountWithMe ensures a seamless and responsive user experience, thanks to React's efficient state management and rendering capabilities.",
+    "link": "https://countwithmee.netlify.app/"
   },
   {
     "id": "2",
     "src": "video2.mp4",
-    "title": "Second video",
-    "description": ""
+    "title": "LearnMERN",
+    "description": "LearnMERN is a comprehensive web application built using the full MERN stack, which includes MongoDB, Express.js, React.js (with Vite.js), and Node.js. This app is designed to help users master the MERN stack by providing a curated collection of resources, including YouTube videos and books from renowned authors. The platform also features an admin panel, granting administrators full control and privileges to manage content, users, and other critical aspects of the application. Whether you're a beginner or an advanced learner, LearnMERN offers everything you need to enhance your MERN stack skills.",
+    "link": "https://learn-mern.netlify.app/"
   },
   {
     "id": "3",

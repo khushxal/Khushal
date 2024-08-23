@@ -44,6 +44,7 @@ function Projects() {
           id="carouselExampleControls"
           className="carousel slide"
           data-bs-ride="carousel"
+          data-bs-interval="10000"
         >
           <div className="carousel-inner">
             {videos.map((video, index) => (
@@ -98,8 +99,12 @@ function Projects() {
               key={index}
               className={`description ${index === currentPage ? "" : "d-none"}`}
             >
-              <h3 className="text-center">{video.title}</h3>
-              <p className="text-justify">{video.description}</p>
+              <h3 className="text-center">
+                <a href={video.link}>{video.title}</a>{" "}
+              </h3>
+              <p className="d-flex fs-5" style={{ textAlign: "justify" }}>
+                {video.description}
+              </p>
             </div>
           ))}
         </div>
