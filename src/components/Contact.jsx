@@ -1,5 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import axios from "axios";
 import "../css/Contact.css";
 
 import { toast } from "react-toastify";
@@ -10,48 +11,64 @@ function Contact() {
   //   phone: "",
   // });
 
+  const [email, setEmail] = useState("");
+
+  const [phone, setPhone] = useState("");
+
+  const [details, setDetails] = useState({
+    email: "",
+    phone: "",
+  });
+
   const form = useRef();
 
-  // function handleChange(e) {
-  //   try {
-  //     const { name, value } = e.target;
-  //     setDetails((prevDetail) => {
-  //       return { ...prevDetail, [name]: value };
-  //     });
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
-
-  function handleSubmit(e) {
+  function handleChange(e) {
     try {
-      e.preventDefault();
-      // if (details.email && details.phone && details.name) {
-      // } else {
-      // }
-      emailjs
-        .sendForm("service_anrhncp", "template_lm45ggj", form.current, {
-          publicKey: "oeXkWQVwg_DMbLTrJ",
-        })
-        .then(
-          () => {
-            toast.success("Your contact details reached to me.");
-          },
-          (error) => {
-            toast.error("Filling the form is mandatory.");
-          }
-        );
-
-      // setDetails({
-      //   email: "",
-      //   name: "",
-      //   phone: "",
-      // });
-      e.target.reset();
-    } catch (err) {
-      console.log(err);
+      const { name, value } = e.target;
+      setDetails({ ...details, [name]: value });
+    } catch (error) {
+      console.log(error);
     }
   }
+
+  async function handleSubmit(e) {
+    try {
+      e.preventDefault();
+      if (!details.email && !details.phone) {
+        const response = await axios.get(
+          `https://emailvalidation.abstractapi.com/v1/?api_key=8d7016983cb64dadbbe1ec1a02846419&email=${details.email}`
+        );
+        const responsePhone = await axios.get(
+          `https://phonevalidation.abstractapi.com/v1/?api_key=4f88447b72d748babf97256e96b7ec52&phone=${details.phone}`
+        );
+        console.log(responsePhone.data.valid);
+        if (
+          (await response.data.deliverability) === "DELIVERABLE" &&
+          (await responsePhone.data.valid)
+        ) {
+          emailjs
+            .sendForm("service_anrhncp", "template_lm45ggj", form.current, {
+              publicKey: "oeXkWQVwg_DMbLTrJ",
+            })
+            .then(
+              () => {
+                toast.success("Your contact details reached to me.");
+              },
+              (error) => {
+                toast.error("Filling the form is mandatory.");
+              }
+            );
+        } else {
+          toast.error("Email is not valid");
+        }
+        e.target.reset();
+        setDetails({ email: "", phone: "" });
+      }
+    } catch (err) {
+      toast.error("Filling the form is mandatory.");
+    }
+  }
+
   return (
     <div id="contact" className="container hidden">
       <div className="cover-container h-100 d-flex p-3 flex-column">
@@ -74,8 +91,8 @@ function Contact() {
                       name="email"
                       className="form-control"
                       id="exampleFormControlInput1"
-                      // onChange={handleChange}
-                      // value={details.email}
+                      onChange={handleChange}
+                      value={details.email}
                     />
                   </div>
                   <div className="mb-3">
@@ -106,8 +123,9 @@ function Contact() {
                       name="phone"
                       className="form-control"
                       id="exampleFormControlInput1"
-                      // onChange={handleChange}
-                      // value={details.phone}
+                      placeholder="Specify country code"
+                      onChange={handleChange}
+                      value={details.phone}
                     />
                   </div>
                 </div>
