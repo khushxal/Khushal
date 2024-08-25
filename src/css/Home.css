@@ -6,6 +6,11 @@
   animation: blink 0.5s step-end infinite;
 }
 
+#home {
+  margin-top: 1%;
+  margin-bottom: 10%;
+}
+
 @keyframes blink {
   from,
   to {
