@@ -5,16 +5,6 @@ import "../css/Contact.css";
 
 import { toast } from "react-toastify";
 function Contact() {
-  // const [details, setDetails] = useState({
-  //   email: "",
-  //   name: "",
-  //   phone: "",
-  // });
-
-  const [email, setEmail] = useState("");
-
-  const [phone, setPhone] = useState("");
-
   const [details, setDetails] = useState({
     email: "",
     phone: "",
