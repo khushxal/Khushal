@@ -1,14 +1,13 @@
+#home {
+  height: 100vh;
+}
+
 .blinking-cursor {
   display: inline-block;
   width: 5px;
   height: 20px;
   background-color: white;
   animation: blink 0.5s step-end infinite;
-}
-
-#home {
-  margin-top: 1%;
-  margin-bottom: 10%;
 }
 
 @keyframes blink {
