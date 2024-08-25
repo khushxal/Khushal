@@ -28,7 +28,7 @@ function Skills() {
       <div className="cover-container d-flex p-3 mx-auto my-auto flex-column">
         <h2>Skills</h2>
         <hr />
-        <div className="row row-cols-1 row-cols-lg-2 g-4">
+        <div className="row row-cols-1 row-cols-lg-4 g-4">
           {skills.map((skill, index) => (
             <div key={index} className="col">
               <div className="glass h-100 p-4">
@@ -43,7 +43,7 @@ function Skills() {
                   <h5 className="card-title">
                     <strong>{skill.skill}</strong>{" "}
                   </h5>
-                  <p className="card-text">{skill.description}</p>
+                  <p className="card-text p-2">{skill.description}</p>
                 </div>
               </div>
             </div>

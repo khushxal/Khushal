@@ -42,11 +42,11 @@ function Projects() {
         <hr />
         <div
           id="carouselExampleControls"
-          className="carousel slide"
+          className="carousel slide rounded-2"
           data-bs-ride="carousel"
           data-bs-interval="10000"
         >
-          <div className="carousel-inner">
+          <div className="carousel-inner rounded-5">
             {videos.map((video, index) => (
               <div
                 key={index}
@@ -69,7 +69,7 @@ function Projects() {
             ))}
           </div>
           <button
-            className="carousel-control-prev"
+            className="carousel-control-prev rounded-5"
             type="button"
             data-bs-slide="prev"
             onClick={handlePrev}
@@ -81,7 +81,7 @@ function Projects() {
             <span className="visually-hidden">Previous</span>
           </button>
           <button
-            className="carousel-control-next"
+            className="carousel-control-next rounded-5"
             type="button"
             data-bs-slide="next"
             onClick={handleNext}
@@ -102,7 +102,7 @@ function Projects() {
               <h3 className="text-center">
                 <a href={video.link}>{video.title}</a>{" "}
               </h3>
-              <p className="d-flex fs-5" style={{ textAlign: "justify" }}>
+              <p className="fs-5 p-3" style={{ textAlign: "justify" }}>
                 {video.description}
               </p>
             </div>

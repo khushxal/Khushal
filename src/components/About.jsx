@@ -2,7 +2,7 @@ import React from "react";
 import imgComputer from "../images/aboutme.jpeg";
 function About() {
   return (
-    <div id="about" className="container hidden">
+    <div id="about" className="container hidden mb-5">
       <div className="cover-container about-cover-container d-flex p-2 flex-column">
         <div className="row align-items-center g-0 py-5">
           <div className="col-lg-4 order-lg-1 col-12 mb-4 mb-lg-0 text-center">
@@ -24,7 +24,7 @@ function About() {
               of work, I enjoy cricket, beatbox and more. These activities not
               only provide a much-needed break from the screen but also inspire
               my creativity and fuel my passion for innovation. */}
-              I'm Khushal Verma, a <strong>B.Tech</strong> student in{" "}
+              {/* I'm Khushal Verma, a <strong>B.Tech</strong> student in{" "}
               <strong>Computer Science Engineering</strong> at{" "}
               <strong>Medi-Caps University</strong>. As a dedicated and
               passionate learner, I have sharpened my skills across a broad
@@ -33,7 +33,11 @@ function About() {
               scalable, high-performance solutions. Outside of my academic and
               technical endeavors, I immerse myself in cricket, beatboxing(Boots
               and Cats), and other pursuits that reinvigorate my creativity and
-              fuel my relentless passion for innovation
+              fuel my relentless passion for innovation */}
+              As a B.Tech student in Computer Science at Medi-Caps University, I
+              excel in crafting seamless user experiences and scalable
+              solutions. Beyond academics, I fuel my creativity through cricket
+              and beatboxing.
             </div>
           </div>
         </div>

@@ -15,6 +15,6 @@
   border: 0;
 }
 
-#skill-card-img {
-  box-shadow: none;
+.card-text {
+  text-align: justify;
 }
