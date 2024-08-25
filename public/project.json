@@ -17,6 +17,7 @@
     "id": "3",
     "src": "video3.mp4",
     "title": "ToDoKeeper",
-    "description": ""
+    "description": "Daily task to task keeper, helps you to manage task in efficient manner. Full MERN stack application.",
+    "link": "https://todokeeper.vercel.app/"
   }
 ]
