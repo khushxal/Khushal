@@ -17,7 +17,7 @@
     "id": "3",
     "src": "video3.mp4",
     "title": "ToDoKeeper",
-    "description": "Daily task to task keeper, helps you to manage task in efficient manner. Full MERN stack application.",
+    "description": "ToDoKeeperApp is a task management application designed to help users efficiently organize and prioritize their daily activities. Built using React.js for the front end and Express.js for the back end, this app offers a user-friendly interface for creating, editing, and managing tasks. With real-time syncing, tasks are always up-to-date, providing a seamless experience across devices. The app’s responsive design ensures it works smoothly on desktops, tablets, and mobile phones. Ideal for both personal and professional use, ToDoKeeperApp simplifies task management and keeps users on track with their goals",
     "link": "https://todokeeper.vercel.app/"
   }
 ]
