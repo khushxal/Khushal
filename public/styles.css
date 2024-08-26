@@ -72,10 +72,6 @@ body {
   background-color: black;
 }
 
-.img-fluid {
-  mix-blend-mode: multiply;
-}
-
 @media (max-width: 767px) {
   img {
     /* Adjust dimensions as needed for mobile */
