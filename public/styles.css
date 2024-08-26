@@ -21,11 +21,17 @@ body {
     #d0d0d4,
     #ffffff
   ); */
-  background: rgb(0, 138, 215);
+  /* background: rgb(0, 138, 215);
   background: radial-gradient(
     circle,
-    rgb(0, 71, 109) 0%,
-    rgba(0, 0, 0, 0.596) 100%
+    #00476d 0%,
+    #00000098 100%
+  ); */
+  background: rgb(97, 116, 125);
+  background: linear-gradient(
+    0deg,
+    rgba(97, 116, 125, 1) 0%,
+    rgba(98, 117, 126, 1) 96%
   );
 }
 
