@@ -34,10 +34,10 @@ function Home() {
     <div id="home" className="container hidden">
       <div className="cover-container d-flex p-3 mx-auto my-auto flex-column">
         <div className="row flex-lg-row-reverse align-items-center justify-content-center g-5 py-5 ">
-          <div className="col-lg-6 order-lg-1 col-md-12 mb-4 mb-lg-0 d-flex justify-content-center">
+          <div className="col-lg-6 order-lg-1 col-md-12 mb-4 mb-lg-0 d-flex justify-content-lg-end justify-content-center">
             <img
               src={img}
-              className=""
+              className="img-fluid"
               style={{
                 width: "70%",
                 maxWidth: "600px",
@@ -49,7 +49,7 @@ function Home() {
           <div className="col-lg-6 order-lg-2 col-md-12 text-center">
             <div className="mb-2 fw-light">
               <h2>I'm</h2>
-              <h1>Khushal Verma</h1>
+              <h1 className="display-2">Khushal Verma</h1>
             </div>
             <p className="lead">
               I am <span>{currentText}</span>
