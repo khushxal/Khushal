@@ -6,8 +6,8 @@ import About from "./components/About.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
-import { ToastContainer } from "react-toastify";
 import SocialMediaHandle from "./components/SocialMediaHandle.jsx";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function App() {
   // useEffect(function () {
