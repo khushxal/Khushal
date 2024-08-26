@@ -21,18 +21,8 @@ body {
     #d0d0d4,
     #ffffff
   ); */
-  /* background: rgb(0, 138, 215);
-  background: radial-gradient(
-    circle,
-    #00476d 0%,
-    #00000098 100%
-  ); */
-  background: rgb(97, 116, 125);
-  background: linear-gradient(
-    0deg,
-    rgba(97, 116, 125, 1) 0%,
-    rgba(98, 117, 126, 1) 96%
-  );
+  background: rgb(0, 138, 215);
+  background: radial-gradient(circle, #00476d 0%, #00000098 100%);
 }
 
 .about-cover-container {
@@ -82,13 +72,8 @@ body {
   background-color: black;
 }
 
-img {
-  transition: transform 1s ease-out;
-}
-
 .img-fluid {
-  border-radius: 48%;
-  mix-blend-mode: exclusion;
+  mix-blend-mode: multiply;
 }
 
 @media (max-width: 767px) {

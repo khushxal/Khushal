@@ -33,13 +33,13 @@ function Home() {
   return (
     <div id="home" className="container hidden">
       <div className="cover-container d-flex p-3 mx-auto my-auto flex-column">
-        <div className="row flex-lg-row-reverse align-items-center justify-content-center g-5 py-5">
+        <div className="row flex-lg-row-reverse align-items-center justify-content-center g-5 py-5 ">
           <div className="col-lg-6 order-lg-1 col-md-12 mb-4 mb-lg-0 d-flex justify-content-center">
             <img
               src={img}
               className="img-fluid"
               style={{
-                width: "60%",
+                width: "70%",
                 maxWidth: "600px",
               }} // Adjust maxWidth as needed
               alt="Bootstrap Themes"
