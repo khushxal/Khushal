@@ -38,7 +38,7 @@ function Projects() {
   return (
     <div id="projects" className="container hidden">
       <div className="cover-container p-3 mx-auto d-flex flex-column">
-        <h2 className="mb-4">Project Works</h2>
+        <h2>Project Works</h2>
         <hr />
         <div
           id="carouselExampleControls"

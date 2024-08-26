@@ -19,7 +19,7 @@
 }
 
 .nav-link:hover {
-  font-size: larger; /* Increase font size on hover */
+  font-size: small; /* Increase font size on hover */
   border-radius: 30px; /* Apply border radius on hover */
   cursor: pointer;
   color: rgb(0, 0, 0);

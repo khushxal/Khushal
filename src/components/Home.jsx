@@ -37,7 +37,7 @@ function Home() {
           <div className="col-lg-6 order-lg-1 col-md-12 mb-4 mb-lg-0 d-flex justify-content-center">
             <img
               src={img}
-              className="img-fluid"
+              className=""
               style={{
                 width: "70%",
                 maxWidth: "600px",
