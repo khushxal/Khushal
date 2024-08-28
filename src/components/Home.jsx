@@ -33,20 +33,17 @@ function Home() {
   return (
     <div id="home" className="container hidden">
       <div className="cover-container d-flex p-3 mx-auto my-auto flex-column">
-        <div className="row flex-lg-row-reverse align-items-center justify-content-center g-5 py-5 ">
-          <div className="col-lg-6 order-lg-1 col-md-12 mb-4 mb-lg-0 d-flex justify-content-lg-end justify-content-center">
+        <div className="row flex-lg-row-reverse align-items-center justify-content-center g-5 py-5">
+          <div className="col-lg-6 col-md-12 mb-4 mb-lg-0 d-flex justify-content-center order-lg-1">
             <img
               src={img}
               className="img-fluid"
-              style={{
-                width: "70%",
-                maxWidth: "600px",
-              }} // Adjust maxWidth as needed
+              style={{ width: "70%", maxWidth: "600px" }} // Adjust maxWidth as needed
               alt="Bootstrap Themes"
               loading="eager"
             />
           </div>
-          <div className="col-lg-6 order-lg-2 col-md-12 text-center">
+          <div className="col-lg-6 col-md-12 text-center order-lg-2">
             <div className="mb-2 fw-light">
               <h2>I'm</h2>
               <h1 className="display-2">Khushal Verma</h1>
@@ -57,7 +54,7 @@ function Home() {
             </p>
             <div className="row">
               <div className="col-12 col-md-6 mb-2 mb-md-0">
-                <a href="Resume.pdf" download={true} className="w-100">
+                <a href="Resume.pdf" download className="w-100">
                   <button
                     type="button"
                     className="btn btn-outline-secondary btn-lg w-100"
@@ -68,12 +65,7 @@ function Home() {
                 </a>
               </div>
               <div className="col-12 col-md-6">
-                <Link
-                  to="contact"
-                  smooth={true}
-                  duration={200}
-                  className="w-100"
-                >
+                <Link to="contact" smooth duration={200} className="w-100">
                   <button
                     type="button"
                     className="btn btn-outline-secondary btn-lg w-100"
