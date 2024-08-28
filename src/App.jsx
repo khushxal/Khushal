@@ -10,22 +10,22 @@ import SocialMediaHandle from "./components/SocialMediaHandle.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function App() {
-  // useEffect(function () {
-  //   const observer = new IntersectionObserver((entries) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting) {
-  //         entry.target.classList.add("show");
-  //       } else {
-  //         entry.target.classList.remove("show");
-  //       }
-  //     });
-  //   });
-  //   const hiddenElement = document.querySelectorAll(".container");
+  useEffect(function () {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+    const hiddenElement = document.querySelectorAll(".container");
 
-  //   hiddenElement.forEach((ele) => {
-  //     observer.observe(ele);
-  //   });
-  // }, []);
+    hiddenElement.forEach((ele) => {
+      observer.observe(ele);
+    });
+  }, []);
 
   return (
     <div>
