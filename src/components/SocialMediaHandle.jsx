@@ -7,7 +7,7 @@ function SocialMediaHandle() {
   return (
     <div className={isMobile ? "mobile" : "handle text-center"}>
       <a href="https://www.linkedin.com/in/khushal-verma">
-        <img src={LinkedInAnimation} width={100} />
+        <img src={LinkedInAnimation} width={60} />
       </a>
       <a href="https://github.com/khushxal?tab=repositories">
         <img src={GithubAnimation} width={50} />
