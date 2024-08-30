@@ -38,9 +38,8 @@ function Home() {
             <img
               src={img}
               className="img-fluid"
-              style={{ width: "70%", maxWidth: "600px" }} // Adjust maxWidth as needed
               alt="Bootstrap Themes"
-              loading="eager"
+              loading="lazy"
             />
           </div>
           <div className="col-lg-6 col-md-12 text-center order-lg-2">
