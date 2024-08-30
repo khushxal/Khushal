@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import img from "../images/img_edit.png";
 import "../css/Home.css";
-import { LiaDownloadSolid } from "react-icons/lia";
 import { MdOutlineConnectWithoutContact } from "react-icons/md";
+import { LiaDownloadSolid } from "react-icons/lia";
+import { isMobile } from "react-device-detect";
 function Home() {
   const texts = ["a Coder.", "a Developer.", "an Engineer."];
 
@@ -37,7 +38,7 @@ function Home() {
           <div className="col-lg-6 col-md-12 mb-4 mb-lg-0 d-flex justify-content-center order-lg-1">
             <img
               src={img}
-              className="img-fluid"
+              className={`img-fluid ${isMobile && "rounded-circle"}`}
               alt="Bootstrap Themes"
               loading="lazy"
             />
@@ -59,6 +60,7 @@ function Home() {
                     className="btn btn-outline-secondary btn-lg w-100"
                   >
                     <LiaDownloadSolid className="me-1 fs-3" />
+                    {/* <Lottie animationData={download} loop={true} /> */}
                     Hire Me
                   </button>
                 </a>
@@ -67,7 +69,7 @@ function Home() {
                 <Link to="contact" smooth duration={200} className="w-100">
                   <button
                     type="button"
-                    className="btn btn-outline-secondary btn-lg w-100"
+                    className="btn btn-outline-secondary btn-lg w-100 active d-flex justify-content-center align-items-center"
                   >
                     <MdOutlineConnectWithoutContact className="me-1 fs-3" />
                     Connect
