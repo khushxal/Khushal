@@ -38,13 +38,13 @@ body {
   opacity: 0;
   filter: blur(5px);
   transition: all 0.7s;
-  transform: translateX(-100px);
+  transform: translate(-100px, 30px);
 }
 
 .show {
   opacity: 1;
   filter: blur(0px);
-  transform: translateX(0);
+  transform: translate(0, 0);
 }
 
 .card {

@@ -7,3 +7,13 @@
   transform: translateY(-50%);
   border-radius: 10px;
 }
+
+.mobile {
+  display: flex;
+  top: 0%;
+  position: fixed;
+  right: 0;
+  width: 100px;
+  /* transform: translateY(-50%); */
+  /* border-radius: 10px; */
+}
