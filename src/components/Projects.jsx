@@ -44,7 +44,7 @@ function Projects() {
           id="carouselExampleControls"
           className="carousel slide rounded-2"
           data-bs-ride="carousel"
-          data-bs-interval="false"
+          data-bs-interval={900000}
         >
           <div className="carousel-inner rounded-5">
             {videos.map((video, index) => (
