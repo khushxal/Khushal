@@ -31,7 +31,7 @@ function Skills() {
         <div className="row row-cols-1 row-cols-lg-4 g-4">
           {skills.map((skill, index) => (
             <div key={index} className="col">
-              <div className="glass h-100 p-4">
+              <div className="h-100 p-4 glass">
                 <img
                   id="skill-card-img"
                   src={skill.icon}

@@ -1,10 +1,7 @@
 .navbar {
-  /* z-index: 1000; */
   border-radius: 20px; /* Rounded corners */
   position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
+  font-size: 20px;
 }
 
 .navbar-toggler {
@@ -19,7 +16,7 @@
 }
 
 .nav-link:hover {
-  font-size: small; /* Increase font size on hover */
+  font-size: large; /* Increase font size on hover */
   border-radius: 30px; /* Apply border radius on hover */
   cursor: pointer;
   color: rgba(255, 255, 255, 0.5);

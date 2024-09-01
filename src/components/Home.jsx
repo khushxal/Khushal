@@ -6,7 +6,7 @@ import { MdOutlineConnectWithoutContact } from "react-icons/md";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { isMobile } from "react-device-detect";
 function Home() {
-  const texts = ["a Coder.", "a Developer.", "an Engineer."];
+  const texts = ["''Coder''", "''Developer''", "''Engineer''"];
 
   const [currentText, setCurrentText] = useState("");
 
@@ -33,8 +33,8 @@ function Home() {
 
   return (
     <div id="home" className="container glass hidden">
-      <div className="cover-container p-3 flex-column">
-        <div className="row flex-lg-row-reverse align-items-center justify-content-center g-5 py-5">
+      <div className=" cover-container p-3 flex-column">
+        <div className="row mt-1  flex-lg-row-reverse align-items-center justify-content-center g-5 py-5">
           <div className="col-lg-6 col-md-12 mb-4 d-flex justify-content-center justify-content-lg-end order-lg-1">
             <img
               src={img}
@@ -46,10 +46,12 @@ function Home() {
           <div className="col-lg-6 col-md-12 text-center order-lg-2">
             <div className="mb-2 fw-light">
               <h2>I'm</h2>
-              <h1 className="display-2">Khushal Verma</h1>
+              <h1 className="display-2">
+                <strong> Khushal Verma</strong>
+              </h1>
             </div>
             <p className="lead">
-              I am <span>{currentText}</span>
+              I am <i>{currentText}</i>
               <span className="blinking-cursor"></span>
             </p>
             <div className="row">

@@ -10,9 +10,8 @@ function Navbar() {
   };
 
   return (
-    <div className="container hidden">
+    <div className="container my-1 hidden">
       <nav className="navbar navbar-expand-lg ">
-        {/* <div className="container"> */}
         <button
           className="navbar-toggler"
           data-bs-toggle="collapse"
@@ -25,7 +24,7 @@ function Navbar() {
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mx-auto text-center">
+          <ul className="navbar-nav mx-auto text-center ">
             <li className="nav-item">
               <Link
                 to="home"
