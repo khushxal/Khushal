@@ -20,7 +20,7 @@ function App() {
         }
       });
     });
-    const hiddenElement = document.querySelectorAll(".container");
+    const hiddenElement = document.querySelectorAll(".hidden");
 
     hiddenElement.forEach((ele) => {
       observer.observe(ele);
