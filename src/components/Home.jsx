@@ -32,10 +32,10 @@ function Home() {
   }, [charIndex, currentIndex, texts]);
 
   return (
-    <div id="home" className="container hidden">
-      <div className="cover-container d-flex p-3 mx-auto my-auto flex-column">
+    <div id="home" className="container glass hidden">
+      <div className="cover-container p-3 flex-column">
         <div className="row flex-lg-row-reverse align-items-center justify-content-center g-5 py-5">
-          <div className="col-lg-6 col-md-12 mb-4 mb-lg-0 d-flex justify-content-center order-lg-1">
+          <div className="col-lg-6 col-md-12 mb-4 d-flex justify-content-center justify-content-lg-end order-lg-1">
             <img
               src={img}
               className={`img-fluid ${isMobile && "rounded-circle"}`}

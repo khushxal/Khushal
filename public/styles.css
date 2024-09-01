@@ -26,13 +26,13 @@ body {
     #ffffff
   ); */
   background: rgb(0, 138, 215);
-  background: radial-gradient(circle, #00476d 0%, #00000098 100%);
+  background: radial-gradient(circle, #75757583 0%, #000000 100%);
 }
 
-.about-cover-container {
+/* .about-cover-container {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.5);
-}
+} */
 
 .hidden {
   opacity: 0;

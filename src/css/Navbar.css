@@ -22,13 +22,13 @@
   font-size: small; /* Increase font size on hover */
   border-radius: 30px; /* Apply border radius on hover */
   cursor: pointer;
-  color: rgb(0, 0, 0);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .nav-link::after {
   content: "";
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.648);
+  background-color: rgba(255, 255, 255, 0.5);
   width: 0%;
   left: 0;
   bottom: 0;
