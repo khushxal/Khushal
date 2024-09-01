@@ -56,13 +56,12 @@ function Home() {
             </p>
             <div className="row">
               <div className="col-12 col-md-6 mb-2 mb-md-0">
-                <a href="Resume.pdf" download className="w-100">
+                <a href="Resume.pdf" target="_blank">
                   <button
                     type="button"
                     className="btn btn-outline-secondary btn-lg w-100"
                   >
                     <LiaDownloadSolid className="me-1 fs-3" />
-                    {/* <Lottie animationData={download} loop={true} /> */}
                     Hire Me
                   </button>
                 </a>
