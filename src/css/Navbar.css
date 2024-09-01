@@ -1,5 +1,5 @@
 .navbar {
-  z-index: 1000;
+  /* z-index: 1000; */
   border-radius: 20px; /* Rounded corners */
   position: sticky;
   top: 0;
@@ -8,7 +8,7 @@
 }
 
 .navbar-toggler {
-  background: rgb(0, 0, 0);
+  background: rgb(250, 250, 250);
 }
 
 .nav-link {

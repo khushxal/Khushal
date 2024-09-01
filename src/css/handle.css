@@ -10,6 +10,8 @@
 
 .mobile {
   display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0%;
   position: fixed;
   right: 0;

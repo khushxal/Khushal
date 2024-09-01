@@ -35,16 +35,16 @@ body {
 } */
 
 .hidden {
-  opacity: 0;
-  filter: blur(5px);
-  transition: all 0.7s;
-  transform: translate(-100px, 30px);
+  opacity: 0.2;
+  filter: blur(10px);
+  transition: all 0.8s;
+  transform: translateX(-200px);
 }
 
 .show {
   opacity: 1;
   filter: blur(0px);
-  transform: translate(0, 0);
+  transform: translateX(0);
 }
 
 .card {
