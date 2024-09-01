@@ -100,7 +100,14 @@ function Projects() {
               className={`description ${index === currentPage ? "" : "d-none"}`}
             >
               <h3 className="text-center">
-                <a href={video.link}>{video.title}</a>{" "}
+                <a href={video.link}>
+                  {video.title}
+                  <img
+                    src="https://img.icons8.com/?size=100&id=7867&format=png&color=000000"
+                    height={30}
+                    className="ms-1 pb-2"
+                  />
+                </a>{" "}
               </h3>
               <p className="fs-5 p-3" style={{ textAlign: "justify" }}>
                 {video.description}
