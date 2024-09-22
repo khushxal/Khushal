@@ -19,5 +19,12 @@
     "title": "ToDoKeeper",
     "description": "ToDoKeeperApp is a task management application using React.js and Express.js, offering real-time syncing and a user-friendly interface. Its responsive design ensures smooth performance across devices, simplifying task management for both personal and professional use.",
     "link": "https://todokeeper.vercel.app/"
+  },
+  {
+    "id": "4",
+    "src": "video4.webm",
+    "title": "Portfolio",
+    "description": "Personal portfolio about Khushal Verma including skills, projects and connecting resources. Build using React.js",
+    "link": "https://khushalverma.netlify.app/"
   }
 ]
