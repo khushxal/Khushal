@@ -32,7 +32,7 @@ function Home() {
   }, [charIndex, currentIndex, texts]);
 
   return (
-    <div id="home" className="container glass hidden">
+    <div id="home" className="container hidden">
       <div className=" cover-container p-3 flex-column">
         <div className="row mt-1  flex-lg-row-reverse align-items-center justify-content-center g-5 py-5">
           <div className="col-lg-6 col-md-12 mb-4 d-flex justify-content-center justify-content-lg-end order-lg-1">
@@ -44,23 +44,20 @@ function Home() {
             />
           </div>
           <div className="col-lg-6 col-md-12 text-center order-lg-2">
-            <div className="mb-2 fw-light">
-              <h2>I'm</h2>
-              <h1 className="display-2">
+            <div className="mb-2">
+              <p className="lead fs-1">I'm</p>
+              <h1 className="display-2 fw-bold">
                 <strong> Khushal Verma</strong>
               </h1>
             </div>
-            <p className="lead">
+            <p className="lead fs-1">
               I am <i>{currentText}</i>
               <span className="blinking-cursor"></span>
             </p>
             <div className="row">
               <div className="col-12 col-md-6 mb-2 mb-md-0">
                 <a href="Resume.pdf" target="_blank">
-                  <button
-                    type="button"
-                    className="btn btn-outline-secondary btn-lg w-100"
-                  >
+                  <button type="button" className="btn btn-lg w-100">
                     <LiaDownloadSolid className="me-1 fs-3" />
                     Hire Me
                   </button>
@@ -70,7 +67,7 @@ function Home() {
                 <Link to="contact" smooth duration={200} className="w-100">
                   <button
                     type="button"
-                    className="btn btn-outline-secondary btn-lg w-100 active d-flex justify-content-center align-items-center"
+                    className="btn btn-lg w-100 active d-flex justify-content-center align-items-center"
                   >
                     <MdOutlineConnectWithoutContact className="me-1 fs-3" />
                     Connect
