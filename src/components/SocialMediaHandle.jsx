@@ -5,7 +5,7 @@ import GithubAnimation from "../images/GithubAnimation.gif";
 import { isMobile } from "react-device-detect";
 function SocialMediaHandle() {
   return (
-    <div className={isMobile ? "mobile" : "handle text-center"}>
+    <div className={isMobile ? "mobile z-1" : "handle text-center"}>
       <a href="https://www.linkedin.com/in/khushal-verma">
         <img src={LinkedInAnimation} width={60} />
       </a>

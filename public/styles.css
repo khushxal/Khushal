@@ -26,7 +26,7 @@ body {
     #ffffff
   ); */
   background: url("https://www.transparenttextures.com/patterns/gplay.png"),
-    radial-gradient(circle, #75757583 0%, #000000 100%);
+    radial-gradient(circle, #000000e1 0%, #000000 100%);
 }
 
 /* .about-cover-container {

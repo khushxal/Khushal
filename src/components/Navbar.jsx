@@ -10,7 +10,7 @@ function Navbar() {
   };
 
   return (
-    <div className="container my-1 hidden">
+    <div className="container mt-1 glass position-fixed top-0 start-0 end-0 z-1">
       <nav className="navbar navbar-expand-lg ">
         <button
           className="navbar-toggler"
