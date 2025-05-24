@@ -24,36 +24,49 @@ function Contact() {
   async function handleSubmit(e) {
     try {
       e.preventDefault();
-      if (!details.email && !details.phone) {
-        const response = await axios.get(
-          `https://emailvalidation.abstractapi.com/v1/?api_key=8d7016983cb64dadbbe1ec1a02846419&email=${details.email}`
-        );
-        const responsePhone = await axios.get(
-          `https://phonevalidation.abstractapi.com/v1/?api_key=4f88447b72d748babf97256e96b7ec52&phone=${details.phone}`
-        );
-        console.log(responsePhone.data.valid);
-        if (
-          (await response.data.deliverability) === "DELIVERABLE" &&
-          (await responsePhone.data.valid)
-        ) {
-          emailjs
-            .sendForm("service_anrhncp", "template_lm45ggj", form.current, {
-              publicKey: "oeXkWQVwg_DMbLTrJ",
-            })
-            .then(
-              () => {
-                toast.success("Your contact details reached to me.");
-              },
-              (error) => {
-                toast.error("Filling the form is mandatory.");
-              }
-            );
-        } else {
-          toast.error("Email is not valid");
+      // if (!details.email && !details.phone) {
+      //   const response = await axios.get(
+      //     `https://emailvalidation.abstractapi.com/v1/?api_key=8d7016983cb64dadbbe1ec1a02846419&email=${details.email}`
+      //   );
+      //   const responsePhone = await axios.get(
+      //     `https://phonevalidation.abstractapi.com/v1/?api_key=4f88447b72d748babf97256e96b7ec52&phone=${details.phone}`
+      //   );
+      //   console.log(responsePhone.data.valid);
+      //   if (
+      //     (await response.data.deliverability) === "DELIVERABLE" &&
+      //     (await responsePhone.data.valid)
+      //   ) {
+      //     emailjs
+      //       .sendForm("service_anrhncp", "template_lm45ggj", form.current, {
+      //         publicKey: "oeXkWQVwg_DMbLTrJ",
+      //       })
+      //       .then(
+      //         () => {
+      //           toast.success("Your contact details reached to me.");
+      //         },
+      //         (error) => {
+      //           toast.error("Filling the form is mandatory.");
+      //         }
+      //       );
+      //   } else {
+      //     toast.error("Email is not valid");
+      //   }
+      //   e.target.reset();
+      //   setDetails({ email: "", phone: "" });
+      // }
+      const response = await fetch(
+        "https://learnmern.onrender.com/api/contact/email",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(details),
         }
-        e.target.reset();
-        setDetails({ email: "", phone: "" });
-      }
+      ).then((response) => {
+        if (response.status == 200) {
+          toast.success("Success");
+        }
+      });
+      alert(result.message);
     } catch (err) {
       toast.error("Filling the form is mandatory.");
     }
