@@ -37,13 +37,13 @@ function Projects() {
 
   return (
     <div id="projects" className="container hidden">
-      <div className="cover-container p-3 mx-auto d-flex flex-column">
+      <div className="cover-container p-3 mx-auto d-flex flex-column py-5">
         <h2>Project Works</h2>
         <hr />
         <div
           id="carouselExampleControls"
           className="carousel slide rounded-2"
-          data-bs-ride="carousel"
+          // data-bs-ride="carousel"
           // data-bs-interval={900000}
           data-interval="false"
         >

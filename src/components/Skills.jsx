@@ -25,7 +25,7 @@ function Skills() {
 
   return (
     <div id="skills" className="container hidden">
-      <div className="cover-container d-flex p-3 mx-auto my-auto flex-column">
+      <div className="cover-container d-flex p-3 mx-auto my-auto flex-column py-5">
         <h2>Skills</h2>
         <hr />
         <div className="row row-cols-1 row-cols-lg-4 g-4">

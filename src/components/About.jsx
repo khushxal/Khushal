@@ -3,15 +3,15 @@ import imgComputer from "../images/aboutme.jpeg";
 function About() {
   return (
     <div id="about" className="container hidden">
-      <div className="cover-container d-flex p-2 flex-column">
+      <div className="cover-container d-flex p-2 flex-column w-100">
         <div className="row align-items-center g-0 py-5">
-          <div className="col-lg-4 order-lg-1 col-12 mb-4 mb-lg-0 text-center">
+          {/* <div className="col-lg-4 order-lg-1 col-12 mb-4 mb-lg-0 text-center">
             <img
               src={imgComputer}
               className="img-fluid rounded-1 w-75"
               alt="My Image"
             />
-          </div>
+          </div> */}
           <div className="col-lg-7 order-lg-2 col-12 text-center text-lg-start">
             <h2>About Me</h2>
             <div className="fs-4" style={{ textAlign: "justify" }}>

@@ -7,8 +7,11 @@ import { toast } from "react-toastify";
 function Contact() {
   const [details, setDetails] = useState({
     email: "",
+    name: "",
     phone: "",
   });
+
+  const [isLoading, setLoading] = useState(false);
 
   const form = useRef();
 
@@ -22,38 +25,25 @@ function Contact() {
   }
 
   async function handleSubmit(e) {
+    e.preventDefault();
+
+    const { email, phone, name } = details;
+
+    // Basic validation
+    if (!email.trim()) {
+      return toast.error("Email cannot be blank");
+    }
+
+    if (!phone.trim() || phone.length !== 10 || !/^\d{10}$/.test(phone)) {
+      return toast.error("Invalid Mobile Number");
+    }
+
+    if (!name.trim()) {
+      return toast.error("Name cannot be blank");
+    }
+
     try {
-      e.preventDefault();
-      // if (!details.email && !details.phone) {
-      //   const response = await axios.get(
-      //     `https://emailvalidation.abstractapi.com/v1/?api_key=8d7016983cb64dadbbe1ec1a02846419&email=${details.email}`
-      //   );
-      //   const responsePhone = await axios.get(
-      //     `https://phonevalidation.abstractapi.com/v1/?api_key=4f88447b72d748babf97256e96b7ec52&phone=${details.phone}`
-      //   );
-      //   console.log(responsePhone.data.valid);
-      //   if (
-      //     (await response.data.deliverability) === "DELIVERABLE" &&
-      //     (await responsePhone.data.valid)
-      //   ) {
-      //     emailjs
-      //       .sendForm("service_anrhncp", "template_lm45ggj", form.current, {
-      //         publicKey: "oeXkWQVwg_DMbLTrJ",
-      //       })
-      //       .then(
-      //         () => {
-      //           toast.success("Your contact details reached to me.");
-      //         },
-      //         (error) => {
-      //           toast.error("Filling the form is mandatory.");
-      //         }
-      //       );
-      //   } else {
-      //     toast.error("Email is not valid");
-      //   }
-      //   e.target.reset();
-      //   setDetails({ email: "", phone: "" });
-      // }
+      setLoading(true);
       const response = await fetch(
         "https://learnmern.onrender.com/api/contact/email",
         {
@@ -61,18 +51,25 @@ function Contact() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(details),
         }
-      ).then((response) => {
-        if (response.status == 200) {
-          toast.success("Success");
-        }
-      });
-      alert(result.message);
+      );
+
+      if (response.ok) {
+        toast.success("You will be receiving confirmation shortly.");
+        setDetails({ email: "", name: "", phone: "" });
+        setLoading(false);
+      } else {
+        toast.error("Some error has occurred.");
+        setDetails({ email: "", name: "", phone: "" });
+        setLoading(false);
+      }
     } catch (err) {
       toast.error("Filling the form is mandatory.");
+      setDetails({ email: "", name: "", phone: "" });
+      setLoading(false);
     }
   }
 
-  return (
+  return !isLoading ? (
     <div id="contact" className="container hidden">
       <div className="cover-container h-100 d-flex p-3 flex-column">
         <h2>Contact Me</h2>
@@ -110,8 +107,8 @@ function Contact() {
                       name="name"
                       className="form-control"
                       id="exampleFormControlInput1"
-                      // onChange={handleChange}
-                      // value={details.name}
+                      onChange={handleChange}
+                      value={details.name}
                     />
                   </div>
                   <div className="mb-3">
@@ -126,7 +123,6 @@ function Contact() {
                       name="phone"
                       className="form-control"
                       id="exampleFormControlInput1"
-                      placeholder="Specify country code"
                       onChange={handleChange}
                       value={details.phone}
                     />
@@ -142,7 +138,7 @@ function Contact() {
           </div>
         </div>
       </div>
-      <div className="row mt-5">
+      {/* <div className="row mt-5">
         <div className="d-lg-flex justify-content-evenly">
           <div className="fs-3">
             📲 : <a href="tel:+918602352536">8602352536</a>
@@ -154,7 +150,14 @@ function Contact() {
             </a>
           </div>
         </div>
+      </div> */}
+    </div>
+  ) : (
+    <div className="text-center py-5">
+      <div className="spinner-border text-grey" role="status">
+        <span className="visually-hidden">Loading...</span>
       </div>
+      <p>Submitting your details...</p>
     </div>
   );
 }
